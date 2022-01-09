@@ -1,0 +1,109 @@
+.box-information {
+  text-align: center;
+  background-color: $color-background;
+  width: 100%;
+
+  .lieu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    background: $color-background2;
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 30%) inset;
+    p {
+      padding-left: 1rem;
+      margin: 0;
+    }
+  }
+  .decouverte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2.8rem;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.box-fonctionnement {
+  padding: 1.313rem;
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+  padding: 0;
+
+  li::before {
+    content: counter(li);
+    color: white;
+    background-color: $color-primaire;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: -0.7rem;
+  }
+
+  li {
+    counter-increment: li;
+    background: $color-background;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    height: 4.5rem;
+    /* padding: 1rem 0rem 1rem 0.6rem; */
+    @include box-shadow;
+    &:hover {
+      background-color: rgb(147, 86, 220, 20%);
+      i {
+        color: $color-primaire;
+      }
+    }
+    i {
+      padding: 0rem 1.5rem 0rem 1.5rem;
+      color: grey;
+    }
+  }
+}
+
+.box-restaurants {
+  background-color: #f6f6f6;
+  padding: 1.313rem;
+  padding-bottom: 3.938rem;
+}
+
+/* ____________________________________________________________________________Breakpoint___________________________________________________________________________ */
+@media screen and (min-width: 1141px) {
+  .tuto-commande {
+    ol {
+      display: flex;
+      justify-content: space-around;
+      li {
+        width: 30%;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
+  .box-restaurants {
+    h2 {
+      padding-bottom: 1rem;
+      text-align: center;
+      @include centrage;
+    }
+    div {
+      @include centrage;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

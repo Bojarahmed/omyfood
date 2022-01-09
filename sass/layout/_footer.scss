@@ -1,0 +1,51 @@
+.boxfooter {
+  background-color: #353535;
+  color: white;
+  padding: 1.313rem;
+  h3 {
+    font-family: Shrikhand;
+    font-size: 20px;
+    letter-spacing: 0.011em;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 1.3rem;
+  }
+  .boxfooter_nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    li {
+      a {
+        color: white;
+      }
+
+      i {
+        width: 20px;
+        padding-right: 0.5rem;
+      }
+
+      :hover {
+        color: $color-primaire;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .boxfooter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .boxfooter_nav {
+      width: 100%;
+      ul {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
+}

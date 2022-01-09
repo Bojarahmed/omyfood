@@ -1,0 +1,17 @@
+.box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: Shrikhand;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  a {
+    position: absolute;
+    left: 1.5rem;
+    font-size: x-large;
+    text-align: center;
+  }
+}

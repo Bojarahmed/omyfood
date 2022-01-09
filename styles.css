@@ -1,6 +1,8 @@
 html, body {
   font-family: "Montserrat", sans-serif;
+  height: 100%;
   margin: 0;
+  color: red;
 }
 
 /* debut spinner*/
@@ -10,17 +12,16 @@ html, body {
   height: 4em;
   background: #a7a6a6;
   -webkit-animation: font-loading 3000ms;
-  animation: font-loading 3000ms;
+          animation: font-loading 3000ms;
   position: absolute;
   z-index: 2;
-  opacity: 0;
 }
 
 .load .fas {
   margin-top: 0.5em;
   font-size: 2em;
   -webkit-animation: fasrotate 3000ms;
-  animation: fasrotate 3000ms;
+          animation: fasrotate 3000ms;
   margin-left: 0.5em;
 }
 
@@ -32,6 +33,7 @@ html, body {
     transform: rotate(2160deg);
   }
 }
+
 @keyframes fasrotate {
   0% {
     transform: rotate(0deg);
@@ -46,105 +48,111 @@ html, body {
   margin-top: 0%;
   margin-left: 0%;
   -webkit-animation: load 3000ms;
-  animation: load 3000ms;
+          animation: load 3000ms;
   opacity: 0;
   position: absolute;
   z-index: 3;
 }
-
 .load__circle--0 {
-  width: 100.7%;
-  height: 0.7%;
-  background: #d185d8ea;
+  width: 7.7em;
+  height: 7.7em;
+  background: #f77a06;
   border-radius: 25%;
   position: absolute;
-  margin-left: 0%;
-  margin-top: 7%;
-  font-size: 2em;
+  margin-left: 10px;
+  margin-top: 10px;
   -webkit-animation: circle 3000ms backwards;
-  animation: circle 3000ms backwards;
-  opacity: 0;
+          animation: circle 3000ms backwards;
+  opacity: 0.5;
+  margin-left: 41%;
+  margin-top: 12%;
+  font-size: 3em;
+  -webkit-animation: fasrotate 3000ms;
+          animation: fasrotate 3000ms;
 }
-
 .load__circle--1 {
-  width: 101.7%;
-  height: 0.7%;
+  width: 7.7em;
+  height: 7.7em;
   background: #aa91c8;
   border-radius: 25%;
   position: absolute;
-  margin-left: 0%;
-  margin-top: 13%;
-  font-size: 2em;
+  margin-left: 10px;
+  margin-top: 10px;
   -webkit-animation: circle 3000ms backwards;
+          animation: circle 3000ms backwards;
+  margin-left: 41%;
+  margin-top: 12%;
+  font-size: 3em;
   animation: circle 3000ms backwards;
-  opacity: 0;
 }
-
 .load__circle--2 {
-  width: 110.2%;
-  height: 1.2%;
+  width: 5.2em;
+  height: 5.2em;
   background: #8558bb;
   border-radius: 50%;
   position: absolute;
-  margin-left: -3%;
-  margin-top: 9%;
-  font-size: 5em;
+  margin-left: 30px;
+  margin-top: 30px;
   -webkit-animation: circle 3000ms backwards;
-  animation: circle 3000ms backwards;
-  opacity: 0;
+          animation: circle 3000ms backwards;
+  margin-left: 38%;
+  margin-top: 25%;
+  font-size: 3em;
 }
-
 .load__circle--3 {
-  width: 107.1%;
-  height: 1%;
+  width: 4em;
+  height: 4em;
   background: #eeead9;
   border-radius: 50%;
   position: absolute;
-  margin-left: 0%;
-  margin-top: 2%;
-  font-size: 3em;
+  margin-left: 40px;
+  margin-top: 40px;
   -webkit-animation: circle 3000ms backwards;
-  animation: circle 3000ms backwards;
-  opacity: 0;
+          animation: circle 3000ms backwards;
+  margin-left: 41%;
+  margin-top: 28%;
+  font-size: 3em;
 }
-
 .load__circle--4 {
   width: 4em;
   height: 4em;
   background-color: rgba(227, 217, 233, 0.05);
   border-radius: 50%;
   position: absolute;
-  margin-left: 46%;
-  margin-top: 20%;
-  font-size: 6em;
+  margin-left: 40px;
+  margin-top: 40px;
   -webkit-animation: circle 3000ms backwards;
-  animation: circle 3000ms backwards;
-  opacity: 0;
+          animation: circle 3000ms backwards;
+  margin-left: 45%;
+  margin-top: 32%;
+  font-size: 6em;
+  -webkit-animation: fasrotate 3000ms;
+          animation: fasrotate 3000ms;
 }
 
 .load__circle--0 {
   -webkit-animation-delay: 500ms;
-  animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
 .load__circle--1 {
   -webkit-animation-delay: 400ms;
-  animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 
 .load__circle--2 {
   -webkit-animation-delay: 300ms;
-  animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 
 .load__circle--3 {
   -webkit-animation-delay: 200ms;
-  animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 
 .load__circle--4 {
   -webkit-animation-delay: 0ms;
-  animation-delay: 0ms;
+          animation-delay: 0ms;
 }
 
 @-webkit-keyframes circle {
@@ -157,6 +165,7 @@ html, body {
     opacity: 1;
   }
 }
+
 @keyframes circle {
   0% {
     transform: scale(0.1);
@@ -322,7 +331,7 @@ html {
 
 .carte img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 12.5rem;
   border-radius: 20px 20px 0 0;
@@ -389,48 +398,48 @@ html {
 
 .pop-menu li:nth-child(1) {
   -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .pop-menu li:nth-child(2) {
   -webkit-animation-delay: 0.7s;
-  animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 
 .pop-menu li:nth-child(3) {
   -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .pop-menu li:nth-child(4) {
   -webkit-animation-delay: 0.9s;
-  animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 .pop-menu_entrees {
   -webkit-animation: anime-menu-bulle 1s both;
-  animation: anime-menu-bulle 1s both;
+          animation: anime-menu-bulle 1s both;
   -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .pop-menu_plats {
   -webkit-animation: anime-menu-bulle 1s both;
-  animation: anime-menu-bulle 1s both;
+          animation: anime-menu-bulle 1s both;
   -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .pop-menu_desserts {
   -webkit-animation: anime-menu-bulle 1s both;
-  animation: anime-menu-bulle 1s both;
+          animation: anime-menu-bulle 1s both;
   -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .menu-bulle {
   -webkit-animation: anime-menu-bulle 1s both;
-  animation: anime-menu-bulle 1s both;
+          animation: anime-menu-bulle 1s both;
   background: white;
   width: 100%;
   height: 4rem;
@@ -483,7 +492,7 @@ html {
   justify-content: center;
   width: 4rem;
   margin-right: -4rem;
-  transition: margin-right 0.5s linear;
+  transition: margin-right 0.25s linear;
 }
 
 .platcheck i {
@@ -519,6 +528,7 @@ html {
     /* transform: translateY(0); */
   }
 }
+
 @keyframes anime-menu-bulle {
   0% {
     opacity: 0;
@@ -716,9 +726,9 @@ ol li i {
 
 .menu-banniere {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
   height: 13rem;
   width: 100%;
 }
@@ -837,5 +847,4 @@ ol li i {
     flex-direction: row;
     justify-content: space-around;
   }
-}
-/*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

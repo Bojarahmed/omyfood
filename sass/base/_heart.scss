@@ -1,0 +1,51 @@
+/*----------------------------------------------------Premier-jet------------------------------------------*/
+[id="toggle-heart"],
+[id="toggle-heart2"],
+[id="toggle-heart3"],
+[id="toggle-heart4"] {
+  position: absolute;
+  left: -100vw;
+}
+
+/* Valeur avant le check */
+[for="toggle-heart"],
+[for="toggle-heart2"],
+[for="toggle-heart3"],
+[for="toggle-heart4"] {
+  color: black;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+  .testr {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: scaleY(0);
+  }
+}
+/* valeur une fois clic */
+[id="toggle-heart"]:checked + label,
+[id="toggle-heart2"]:checked + label,
+[id="toggle-heart3"]:checked + label,
+[id="toggle-heart4"]:checked + label {
+  i {
+    opacity: 0;
+  }
+  .testr {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 500ms cubic-bezier(0.32, 0, 0.07, 1);
+    background: linear-gradient(
+      184deg,
+      rgba(147, 86, 220, 1) 0%,
+      rgba(255, 121, 218, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+/*----------------------------------------------------Premier-jet------------------------------------------*/
