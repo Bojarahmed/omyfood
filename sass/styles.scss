@@ -7,274 +7,127 @@ html, body {
 /* debut spinner*/
 /*loading spinner*/
 
-.font-loading {
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
   width: 100%;
-  height: 4em;
-  background: #a7a6a6;
-  -webkit-animation: font-loading 3000ms;
-  animation: font-loading 3000ms;
-  position: absolute;
-  z-index: 2;
-  opacity: 0;
+  left: 0;
+  top: 0;
+  // background-color: rgb(241, 157, 237);
+  background: linear-gradient(#ff79da, #9356dc);
+  animation: loader 0.10ms;
+  animation-delay: 0.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader--item {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  animation: jump 1s;
+  animation-iteration-count: 1;
+}
+.loader--item--container {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+.loader--item--1 {
+  background-color: #9356dc;
+}
+.loader--item--2 {
+  background-color: #ff79da;
+  animation-delay: 1.25s;
+}
+.loader--item--3 {
+  background-color: #99e2d0;
+  animation-delay: 2.5s;
 }
 
-.load .fas {
-  margin-top: 0.5em;
-  font-size: 2em;
-  -webkit-animation: fasrotate 3000ms;
-  animation: fasrotate 3000ms;
-  margin-left: 0.5em;
-}
-
-@-webkit-keyframes fasrotate {
+@keyframes jump {
   0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes spin {
+  from {
     transform: rotate(0deg);
   }
-  100% {
-    transform: rotate(2160deg);
+  to {
+    transform: rotate(-360deg);
   }
 }
-
-@keyframes fasrotate {
+@keyframes itemdown {
   0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(2160deg);
-  }
-}
-
-.load {
-  width: 9em;
-  height: 9em;
-  margin-top: 0%;
-  margin-left: 0%;
-  -webkit-animation: load 3000ms;
-  animation: load 3000ms;
-  opacity: 0;
-  position: absolute;
-  z-index: 3;
-}
-
-.load__circle--0 {
-  width: 94.7%;
-  height: 1.7%;
-  background: #d185d8ea;
-  border-radius: 50%;
-  position: absolute;
-  margin: auto;
-  top: -42%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 2em;
-  -webkit-animation: circle 3000ms backwards;
-  animation: circle 3000ms backwards;
-  opacity: 0;
-}
-
-.load__circle--1 {
-  width: 93.7%;
-  height: 1.7%;
-  background: #aa91c8;
-  border-radius: 50%;
-  position: absolute;
-  margin: auto;
-  top: -17%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 2em;
-  -webkit-animation: circle 3000ms backwards;
-  animation: circle 3000ms backwards;
-  opacity: 0;
-}
-
-.load__circle--2 {
-  width: 88.2%;
-  height: 1.2%;
-  background: #8558bb;
-  border-radius: 50%;
-  position: absolute;
-  margin: auto;
-  top: -54%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 5em;
-  -webkit-animation: circle 3000ms backwards;
-  animation: circle 3000ms backwards;
-  opacity: 0;
-}
-
-.load__circle--3 {
-   width: 84.1%;
-   height: 1%;
-   background: #eeead9;
-   border-radius: 50%;
-   position: absolute;
-   margin: auto;
-   top: -42%;
-   left: 0%;
-   right: 0%;
-   bottom: 0;
-   font-size: 3em;
-   -webkit-animation: circle 3000ms backwards;
-   animation: circle 3000ms backwards;
-   opacity: 0;
-  }
-  
-  .load__circle--4 {
-    // width: 4em;
-    // height: 4em;
-    background-color: rgba(227, 217, 233, 0.05);
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 22%;
-    left: 48%;
-    font-size: 6em;
-    -webkit-animation: circle 3000ms backwards;
-    animation: circle 3000ms backwards;
-    z-index: 0;
+    transform: translateY(50px);
     opacity: 0;
   }
-  
-  .load__circle--0 {
-    -webkit-animation-delay: 500ms;
-    animation-delay: 500ms;
-  }
-  .load__circle--1 {
-    -webkit-animation-delay: 400ms;
-    animation-delay: 400ms;
-  }
-  .load__circle--2 {
-    -webkit-animation-delay: 300ms;
-    animation-delay: 300ms;
-  }
-  .load__circle--3 {
-    -webkit-animation-delay: 200ms;
-    animation-delay: 200ms;
-  }
-  .load__circle--4 {
-    -webkit-animation-delay: 0ms;
-    animation-delay: 0ms;
-  }
-  @-webkit-keyframes circle {
-    0% {
-      transform: scale(0.1);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  @keyframes circle {
-    0% {
-      transform: scale(0.1);
-      opacity: 0;
-      left: 100%;
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes load {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-      margin-top: 50%;
-      margin-left: 30%;
-    }
-    50% {
-      transform: scale(1);
-      opacity: 1;
-      margin-top: 50%;
-      margin-left: 30%;
-    }
-    80% {
-      transform: scale(1);
-      opacity: 1;
-      margin-top: 50%;
-      margin-left: 30%;
-    }
-    95% {
-      transform: scale(1);
-      opacity: 1;
-      margin-top: 50%;
-      margin-left: 30%;
-    }
-    100% {
-      transform: scale(0);
-      opacity: 0;
-      margin-top: 50%;
-      margin-left: 30%;
-      left: 100%;
-      transform: translateX(-100%);
-    }
-  }
-  @keyframes load {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-      margin-top: 50%;
-      margin-left: 30%;
-    }
-    50% {
-      transform: scale(1);
-      opacity: 1;
-      margin-top: 50%;
-      margin-left: 30%;
-    }
-    80% {
-      transform: scale(1);
-      opacity: 1;
-      margin-top: 50%;
-      margin-left: 30%;
-    }
-    95% {
-      transform: scale(1);
-      opacity: 1;
-      margin-top: 50%;
-      margin-left: 30%;
-    }
   100% {
-    transform: scale(0);
-    opacity: 0;
-    margin-top: 50%;
-    margin-left: 30%;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
-@-webkit-keyframes font-loading {
-  0% {
-    transform: scaleY(65);
-    opacity: 0.9;
-  }
-  98% {
-    transform: scaleY(65);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
+.delay-0 {
+  animation: itemdown 0.5s ease-in-out 0s;
 }
-@keyframes font-loading {
-  0% {
-    transform: scaleY(65);
-    opacity: 0.9;
-  }
-  98% {
-    transform: scaleY(65);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
+
+.delay-1 {
+  animation: itemdown 0.5s ease-in-out 0.05s;
+}
+
+.delay-2 {
+  animation: itemdown 0.5s ease-in-out 0.1s;
+}
+
+.delay-3 {
+  animation: itemdown 0.5s ease-in-out 0.15s;
+}
+
+.delay-4 {
+  animation: itemdown 0.5s ease-in-out 0.2s;
+}
+
+.delay-5 {
+  animation: itemdown 0.5s ease-in-out 0.25s;
+}
+
+.delay-6 {
+  animation: itemdown 0.5s ease-in-out 0.3s;
+}
+
+.delay-7 {
+  animation: itemdown 0.5s ease-in-out 0.35s;
+}
+
+.delay-8 {
+  animation: itemdown 0.5s ease-in-out 0.4s;
+}
+
+.delay-9 {
+  animation: itemdown 0.5s ease-in-out 0.45s;
 }
 /*==== fin loading spinner====*/
 .body {
@@ -356,9 +209,9 @@ html {
   margin: 0;
 }
 
-.carte:hover {
-  transform: scale(1.02);
-}
+// .carte:hover {
+//   transform: scale(1.02);
+// }
 
 .stickers {
   position: absolute;
@@ -558,58 +411,97 @@ html {
   }
 }
 /*----------------------------------------------------Premier-jet------------------------------------------*/
-[id=toggle-heart],
-[id=toggle-heart2],
-[id=toggle-heart3],
-[id=toggle-heart4] {
-  position: absolute;
-  left: -100vw;
-}
+// [id=toggle-heart],
+// [id=toggle-heart2],
+// [id=toggle-heart3],
+// [id=toggle-heart4] {
+//   position: absolute;
+//   left: -100vw;
+// }
 
 /* Valeur avant le check */
-[for=toggle-heart],
-[for=toggle-heart2],
-[for=toggle-heart3],
-[for=toggle-heart4] {
-  color: black;
-  font-size: 1.5rem;
+// [for=toggle-heart],
+// [for=toggle-heart2],
+// [for=toggle-heart3],
+// [for=toggle-heart4] {
+//   color: black;
+//   font-size: 1.5rem;
+//   position: relative;
+//   z-index: 1;
+// }
+
+// [for=toggle-heart] .testr,
+// [for=toggle-heart2] .testr,
+// [for=toggle-heart3] .testr,
+// [for=toggle-heart4] .testr {
+//   position: absolute;
+//   z-index: 2;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   transform: scaleY(0);
+// }
+
+.main--btn {
+  height: 2rem;
+  margin-right: 0.5rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
   position: relative;
-  z-index: 1;
+  font-size: 25px;
+  outline: 0;
 }
-
-[for=toggle-heart] .testr,
-[for=toggle-heart2] .testr,
-[for=toggle-heart3] .testr,
-[for=toggle-heart4] .testr {
+.main--btn:hover .btn--icon:first-child {
+  transition-duration: 0.25s;
+  opacity: 0;
+}
+.main--btn:hover .btn--icon:nth-child(2) {
+  opacity: 100%;
+}
+.main--btn .btn--icon:nth-child(2) {
+  transition-duration: 0.25s;
+  background: linear-gradient(180deg, #9b44d9 -10%, #e44fd7 110%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  left: 0;
-  transform: scaleY(0);
-}
-
-/* valeur une fois clic */
-[id=toggle-heart]:checked + label i,
-[id=toggle-heart2]:checked + label i,
-[id=toggle-heart3]:checked + label i,
-[id=toggle-heart4]:checked + label i {
   opacity: 0;
 }
 
-[id=toggle-heart]:checked + label .testr,
-[id=toggle-heart2]:checked + label .testr,
-[id=toggle-heart3]:checked + label .testr,
-[id=toggle-heart4]:checked + label .testr {
-  opacity: 1;
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 500ms cubic-bezier(0.32, 0, 0.07, 1);
-  background: linear-gradient(184deg, #9356dc 0%, #ff79da 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.menu--btn {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 4rem 0;
 }
+.menu--btn .menu--cta {
+  padding: 15px 50px;
+}
+
+/* valeur une fois clic */
+// [id=toggle-heart]:checked + label i,
+// [id=toggle-heart2]:checked + label i,
+// [id=toggle-heart3]:checked + label i,
+// [id=toggle-heart4]:checked + label i {
+//   opacity: 0;
+// }
+
+// [id=toggle-heart]:checked + label .testr,
+// [id=toggle-heart2]:checked + label .testr,
+// [id=toggle-heart3]:checked + label .testr,
+// [id=toggle-heart4]:checked + label .testr {
+  // opacity: 1;
+  // transform: scaleY(1);
+  // transform-origin: bottom;
+  // transition: transform 500ms cubic-bezier(0.32, 0, 0.07, 1);
+  // background: linear-gradient(184deg, #9356dc 0%, #ff79da 100%);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // background-clip: text;
+// }
 
 /*----------------------------------------------------Premier-jet------------------------------------------*/
 .box-information {

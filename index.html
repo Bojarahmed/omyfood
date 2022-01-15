@@ -8,7 +8,7 @@
 
 	   <link rel="stylesheet" href="sass/styles.css"/>
 	   <link rel="preconnect" href="https://fonts.gstatic.com"/>
-	   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet"/>
+	   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;500;700&family=Shrikhand&display=swap" rel="stylesheet"/>
 	   
 	   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -18,14 +18,14 @@
     <body class="body">
 	    <div class="contenu">
 			<div class="loader">
-				<div class="load__circle load__circle--0"></div>
-				<div class="load__circle load__circle--1"></div>
-				<div class="load__circle load__circle--2"></div>
-				<div class="load__circle load__circle--3"></div>
-				<div class="load__circle load__circle--4">
-					<p><i class="fas fa-glass-cheers fa-spin" style="font-size:60%"></i></p>
-				</div>						
-			</div>
+				<div class="loader--item--container">
+				  <div class="loader--item loader--item--1"></div>
+				  <div class="loader--item loader--item--2"></div>
+				  <div class="loader--item loader--item--3"></div>
+				  <p><i class="fas fa-glass-cheers fa-spin" style="font-size:0%"></i></p>
+				</div>
+			  </div>  
+			
 		    <header class="box-header">
 			    <h1>Ohmyfood</h1>
 		    </header>
@@ -70,9 +70,11 @@
 							<p><b>La palette du goût</b><br/>Ménilmontant</p>
 						</a>
 																	<!-- coeur début-->
-							<input id="toggle-heart" type="checkbox"/>
-							<label for="toggle-heart"><i class="fas fa-heart testr"></i>
-							<i class="far fa-heart"></i></label>
+																	<span class="main--btn card--btn">
+																		<span class="far fa-heart btn--icon"></span>
+																		<span class="fas fa-heart btn--icon"></span>
+																	  </span>
+
 																	<!-- coeur fin-->
 						</figcaption>		
 					</figure>
@@ -92,10 +94,10 @@
 
 														<!-- coeur like début-->
 
-							<input id="toggle-heart2" type="checkbox"/>
-							<label for="toggle-heart2">
-								<i class="fas fa-heart testr"></i>
-								<i class="far fa-heart"></i></label>
+														<span class="main--btn card--btn">
+															<span class="far fa-heart btn--icon"></span>
+															<span class="fas fa-heart btn--icon"></span>
+														  </span>
 
 															<!-- coeur  fin-->
 						</figcaption>
@@ -110,11 +112,10 @@
 								<b>À la française</b> <br />Cité Rouge</a> </span>
 														<!-- coeur  début-->
 									
-							<input id="toggle-heart3" type="checkbox"/>
-							<label for="toggle-heart3">
-								<i class="fas fa-heart testr"></i>
-								<i class="far fa-heart"></i>
-							</label>
+														<span class="main--btn card--btn">
+															<span class="far fa-heart btn--icon"></span>
+															<span class="fas fa-heart btn--icon"></span>
+														  </span>
 															<!-- coeur  fin-->
 						</figcaption>
 					</figure>
@@ -132,11 +133,10 @@
 							</span>
 															<!-- coeur like début-->
 															
-							<input id="toggle-heart4" type="checkbox"/>
-							<label for="toggle-heart4">
-								<i class="fas fa-heart testr"></i>
-								<i class="far fa-heart"></i>
-							</label>
+															<span class="main--btn card--btn">
+																<span class="far fa-heart btn--icon"></span>
+																<span class="fas fa-heart btn--icon"></span>
+															  </span>
 															<!-- coeur like fin-->
 						</figcaption>
 					</figure>
