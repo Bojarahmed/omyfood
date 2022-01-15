@@ -1,210 +1,199 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <meta name="Ahmed EL-BOJARFAOUI" content="OMYFOOD"/>
 
     <link rel="stylesheet" href="./public/css/style.css"/>    
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet"/>    
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    
-    <title>La palette du goût</title>
-  </head>
-  
-  
-  <body class="body">
 
-    <div class="contenu">
+    <title>Menu</title>
+  </head>
+  <body class="body">
+    <div>
       <header class="box-header">
         <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
         <h1>Ohmyfood</h1>
-
       </header>
-      
       <div class="Photobanniere"></div>
       <main class="main-menu">
         <img class="menu-banniere" src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat de restaurant"/>
         <div class="titre-menu">
-          <h2>La palette du goût</h2>
+          <h2>À la française</h2>
           <input id="toggle-heart" type="checkbox"/>
           <label for="toggle-heart">
             <i class="fas fa-heart testr"></i>
             <i class="far fa-heart"></i>
           </label>
         </div>
-        
-        <div class="zone-menu">
-          <section class="mini-menu">
-                                                                <!-- LES ENTREES -->
-            <h3>ENTRÉES</h3>
-            <hr />
-            <ul class="pop-menu pop-menu_entrees">
-              <li class="menu-bulle">
-                <div class="menu-bulle_description">
-                  <b>Fricassée d'escargot</b>
-                  <p>Au piment d'Espelette</p>
-                </div>
-                <span class="menu-bulle_prix"><b>25€</b></span>
-                <input
-                  class="selection_plat"
-                  type="radio"
-                  name="ENTRÉES"
-                  value="Entrées 1"
-                />
-                <span class="platcheck">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-              </li>
-              <li class="menu-bulle">
-                <div class="menu-bulle_description">
-                  <b>Foie gras de canard mi-cuit</b>
-                  <p>Et ses copeaux de truffe noire</p>
-                </div>
-                <span class="menu-bulle_prix"><b>35€</b></span>
-                <input
-                  class="selection_plat"
-                  type="radio"
-                  name="ENTRÉES"
-                  value="Entrées 2"
-                />
-                <span class="platcheck">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-              </li>
-              <li class="menu-bulle">
-                <div class="menu-bulle_description">
-                  <b>Oeuf au plat</b>
-                  <p>Assaisonné à la truffe sur lit de caviar</p>
-                </div>
-                <span class="menu-bulle_prix"><b>20€</b></span>
-                <input
-                  class="selection_plat"
-                  type="radio"
-                  name="ENTRÉES"
-                  value="Entrées 3"/>
-
-                <span class="platcheck">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-              </li>
-            </ul>
-          </section>
-
-          <section class="mini-menu">
-                                                             <!-- LES PLATS -->
-            <h3>PLATS</h3>
-            <hr />
-            <ul class="pop-menu pop-menu_plats">
-              <li class="menu-bulle">
-                <div class="menu-bulle_description">
-                  <b>Filet de boeuf aux herbes</b>
-                  <p>Accompagné de sa ribambelle de légumes</p>
-                </div>
-                <span class="menu-bulle_prix"><b>40€</b></span>
-                <input
-                  class="selection_plat"
-                  type="radio"
-                  name="PLATS"
-                  value="Plats 1"
-                />
-                <span class="platcheck">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-              </li>
-              <li class="menu-bulle">
-                <div class="menu-bulle_description">
-                  <b>Parmentier de queue de boeuf</b>
-                  <p>À la truffe noire sur sa purée de panais</p>
-                </div>
-                <span class="menu-bulle_prix"><b>35€</b></span>
-                <input
-                  class="selection_plat"
-                  type="radio"
-                  name="PLATS"
-                  value="Plats 2"
-                />
-                <span class="platcheck">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-              </li>
-              <li class="menu-bulle">
-                <div class="menu-bulle_description">
-                  <b>Filet de turbot</b>
-                  <p>Aux agrumes</p>
-                </div>
-                <span class="menu-bulle_prix"><b>44€</b></span>
-                <input
-                  class="selection_plat"
-                  type="radio"
-                  name="PLATS"
-                  value="Plats 3"
-                />
-                <span class="platcheck">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-              </li>
-            </ul>
-          </section>
-          <section class="mini-menu">
-                                                         <!--LES DESSERTS -->
-            <h3>DESSERTS</h3>
-            <hr />
-            <ul class="pop-menu pop-menu_desserts">
-              <li class="menu-bulle">
-                <div class="menu-bulle_description">
-                  <b>Paris-Brest</b>
-                  <p>Revisité</p>
-                </div>
-                <span class="menu-bulle_prix"><b>18€</b></span>
-                <input
-                  class="selection_plat"
-                  type="radio"
-                  name="DESSERTS"
-                  value="Desserts 1"
-                />
-                <span class="platcheck">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-              </li>
-              <li class="menu-bulle">
-                <div class="menu-bulle_description">
-                  <b>Macaron au chocolat d'exception </b>
-                  <p>Et glace à la vanille de Madagascar</p>
-                </div>
-                <span class="menu-bulle_prix"><b>22€</b></span>
-                <input
-                  class="selection_plat"
-                  type="radio"
-                  name="DESSERTS"
-                  value="Desserts 2"
-                />
-                <span class="platcheck">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-              </li>
-              <li class="menu-bulle">
-                <div class="menu-bulle_description">
-                  <b>Mousse au chocolat </b>
-                  <p>Au piment d'Espelette et à la truffe noire</p>
-                </div>
-                <span class="menu-bulle_prix"><b>23€</b></span>
-                <input
-                  class="selection_plat"
-                  type="radio"
-                  name="DESSERTS"
-                  value="Desserts 3"
-                />
-                <span class="platcheck">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-              </li>
-            </ul>
-          </section>
-        </div>
+        <section class="mini-menu">
+                                                                        <!-- LES ENTREES -->
+          <h3>ENTRÉES</h3>
+          <hr/>
+          <ul class="pop-menu pop-menu_entrees">
+            <li class="menu-bulle">
+              <div class="menu-bulle_description">
+                <b>Tartare de poulpe acidulé</b>
+                <p>Aux zests d'orange</p>
+              </div>
+              <span class="menu-bulle_prix"><b>25€</b></span>
+              <input class="selection_plat"
+                type="radio"
+                name="ENTRÉES"
+                value="Tartare de poulpe acidulé"
+              />
+              <span class="platcheck">
+              <i class="fas fa-check-circle"></i>
+              </span>
+            </li>
+            <li class="menu-bulle">
+              <div class="menu-bulle_description">
+                <b>Velouté de légumes d'antan</b>
+                <p>Carotte, panais, topinambour</p>
+              </div>
+              <span class="menu-bulle_prix"><b>35€</b></span>
+              <input
+                class="selection_plat"
+                type="radio"
+                name="ENTRÉES"
+                value="Tartare dulé"
+              />
+              <span class="platcheck">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </li>
+            <li class="menu-bulle">
+              <div class="menu-bulle_description">
+                <b>Soupe à L'oignon</b>
+                <p>Revisité</p>
+              </div>
+              <span class="menu-bulle_prix"><b>20€</b></span>
+              <input
+                class="selection_plat"
+                type="radio"
+                name="ENTRÉES"
+                value="Tartare de poulpe"
+              />
+              <span class="platcheck">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </li>
+          </ul>
+        </section>
+        <section class="mini-menu">
+          <!-- ________________________________________________________________LES PLATS -->
+          <h3>PLATS</h3>
+          <hr />
+          <ul class="pop-menu pop-menu_plats">
+            <li class="menu-bulle">
+              <div class="menu-bulle_description">
+                <b>Coquilles Saint-Jacques</b>
+                <p>Accompagnées d'une purée de panais</p>
+              </div>
+              <span class="menu-bulle_prix"><b>40€</b></span>
+              <input
+                class="selection_plat"
+                type="radio"
+                name="PLATS"
+                value="Coquilles Saint-Jacques"
+              />
+              <span class="platcheck">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </li>
+            <li class="menu-bulle">
+              <div class="menu-bulle_description">
+                <b>Magret de canard</b>
+                <p>Et parmentier de pommes de terres</p>
+              </div>
+              <span class="menu-bulle_prix"><b>35€</b></span>
+              <input
+                class="selection_plat"
+                type="radio"
+                name="PLATS"
+                value="Coquilles Saint-Jacques"
+              />
+              <span class="platcheck">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </li>
+            <li class="menu-bulle">
+              <div class="menu-bulle_description">
+                <b>Pigeonneau d'Ille-et-Vilaine</b>
+                <p>Sur son lit de gnocchis aux légumes</p>
+              </div>
+              <span class="menu-bulle_prix"><b>44€</b></span>
+              <input
+                class="selection_plat"
+                type="radio"
+                name="PLATS"
+                value="Coquilles Saint-Jacques"
+              />
+              <span class="platcheck">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </li>
+          </ul>
+        </section>
+        <section class="mini-menu">
+          <!-- _____________________________________LES DESSERTS -->
+          <h3>DESSERTS</h3>
+          <hr />
+          <ul class="pop-menu pop-menu_desserts">
+            <li class="menu-bulle">
+              <div class="menu-bulle_description">
+                <b>Pétales de violettes glacés</b>
+                <p>Et purée de noisettes</p>
+              </div>
+              <span class="menu-bulle_prix"><b>18€</b></span>
+              <input
+                class="selection_plat"
+                type="radio"
+                name="DESSERTS"
+                value="Coquilles Saint-Jacques"
+              />
+              <span class="platcheck">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </li>
+            <li class="menu-bulle">
+              <div class="menu-bulle_description">
+                <b>Fondant au chocolat</b>
+                <p>Revisité</p>
+              </div>
+              <span class="menu-bulle_prix"><b>22€</b></span>
+              <input
+                class="selection_plat"
+                type="radio"
+                name="DESSERTS"
+                value="Coquilles Saint-Jacques"
+              />
+              <span class="platcheck">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </li>
+            <li class="menu-bulle">
+              <div class="menu-bulle_description">
+                <b>Millefeuille croustillant</b>
+                <p>Myrtilles et pâte d'amande</p>
+              </div>
+              <span class="menu-bulle_prix"><b>23€</b></span>
+              <input
+                class="selection_plat"
+                type="radio"
+                name="DESSERTS"
+                value="Coquilles Saint-Jacques"
+              />
+              <span class="platcheck">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </li>
+          </ul>
+        </section>
         <div class="space_btn">
           <button class="btn">Commander</button>
         </div>
